@@ -1,3 +1,4 @@
+@import '../variables';
 * {
   box-sizing: border-box;
 }
@@ -5,15 +6,13 @@
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  // padding: 2rem;
-  padding: 0;
+  min-height: 100vh;
+  padding: 2vh 0;
   font-family: $font-family-sans-serif;
   font-size: 16px;
   line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  background-color: $background-color;
+  // color: $uoc-corporate;
 }
 
 .uoc-container {
@@ -69,15 +68,60 @@ body {
   }
 
   &__nav {
-    margin-top: 20px;
+    // margin-top: 20px;
+    padding: 10px 0;
+
+    .nav__list {
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      // justify-content: center;
+      justify-content: space-around;
+      .nav__item {
+        // margin-right: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .nav__link {
+          color: $secondary-color;
+          text-decoration: none;
+          display: inline-block;
+          padding: 10px;
+          transition: color 0.3s;
+          .link__text{
+            margin-left: 5px;
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
   }
 
-  &__link {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
+  @media screen and (max-width: $mqMinWidth) {
+    &__nav {
+      .nav__list {
+        flex-direction: column;
+
+        .nav__item {
+          // margin: 10px 0;
+          padding: $spacing;
+          text-align: center;
+          .link__text {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }
+
 
 /* Bloque div */
 div {
@@ -127,7 +171,57 @@ div {
 /* Bloque Footer */
 .footer {
   background-color: $primary-color;
-  color: white;
+  color:$secondary-color;
   text-align: center;
   padding: 10px 0;
+}
+
+/* Bloque Carousel */
+
+.gallery__carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery__carousel-image {
+  width: 100%;
+  float: left;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.gallery__carousel-image:nth-child(1) {
+  opacity: 1;
+  z-index: 2;
+}
+
+.gallery__carousel-image:nth-child(2) {
+  z-index: 1;
+}
+
+.gallery__carousel-image:nth-child(3) {
+  z-index: 1;
+  animation: carousel 12s infinite;
+}
+
+.gallery__carousel-image:nth-child(4) {
+  z-index: 1;
+  animation: carousel 12s infinite;
+  animation-delay: 4s;
+}
+
+.gallery__carousel-image:nth-child(5) {
+  z-index: 1;
+  animation: carousel 12s infinite;
+  animation-delay: 8s;
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }

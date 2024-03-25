@@ -4,50 +4,124 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
+        <meta
+            name="description"
+            content="Descubre la diversidad de Nueva York explorando sus museos de clase mundial, disfrutando de la gastronomía global en sus variados restaurantes."
+        />
+        <meta
+            name="keywords"
+            content="Nueva York, Viaje, Turismo, Atracciones"
+        />
         <link
             rel="stylesheet"
             type="text/css"
             href="./assets/styles/main.scss"
         />
         <!-- do not remove this line! -->
-        <title>Nueva York</title>
+        <title>Nueva York UOC PEC1</title>
     </head>
     <body>
-        <include src="./views/header.html"></include>
-        <div class="about">
-            <h2 class="about__title">Sobre Nueva York</h2>
-            <p class="about__content">
-                Inserta aquí información sobre Nueva York.
-            </p>
-        </div>
-        <div class="attractions">
-            <h2 class="attractions__title">Atracciones</h2>
-            <p class="attractions__content">
-                Inserta aquí información sobre las atracciones de Nueva York.
-            </p>
-        </div>
-        <div class="gallery">
-            <h2 class="gallery__title">Galería</h2>
-            <p class="gallery__content">
-                Inserta aquí una galería de imágenes de Nueva York.
-            </p>
-        </div>
-        <div class="contact">
-            <h2 class="contact__title">Contacto</h2>
-            <form class="contact__form">
-                <label for="name" class="contact__label">Nombre:</label>
-                <input type="text" id="name" name="name" class="contact__input" required>
-                <label for="email" class="contact__label">Email:</label>
-                <input type="email" id="email" name="email" class="contact__input" required>
-                <label for="message" class="contact__label">Mensaje:</label>
-                <textarea id="message" name="message" class="contact__textarea" required></textarea>
-                <button type="submit" class="contact__button">Enviar</button>
-            </form>
+        <div class="container">
+            <div class="wrapper">
+                <include src="./views/header.html"></include>
+                <section class="about" id="about">
+                    <h2 class="about__title">
+                        <i class="fas fa-home"></i>Sobre Nueva York
+                    </h2>
+                    <p class="about__content">
+                        Nueva York, la ciudad que nunca duerme, es un crisol de
+                        culturas, ideas y energía. Ubicada en la desembocadura
+                        del río Hudson, esta metrópolis es el hogar de más de
+                        ocho millones de personas que provienen de todas partes
+                        del mundo. Desde los rascacielos que dominan el
+                        horizonte de Manhattan hasta los históricos vecindarios
+                        de Brooklyn, cada rincón de la ciudad tiene su propia
+                        historia que contar. Descubre la diversidad de Nueva
+                        York explorando sus museos de clase mundial, disfrutando
+                        de la gastronomía global en sus variados restaurantes, o
+                        simplemente paseando por sus bulliciosas calles llenas
+                        de vida y energía.
+                    </p>
+                </section>
+                <section class="attractions" id="attractions">
+                    <h2 class="attractions__title">
+                        <i class="fas fa-map-marker-alt"></i>Atracciones
+                    </h2>
+                    <p class="attractions__content">
+                        Las atracciones de Nueva York son tan diversas como la
+                        ciudad misma. Comienza tu aventura en el emblemático
+                        Central Park, un oasis verde en medio de la jungla de
+                        concreto, donde puedes pasear en bote por el lago,
+                        visitar el zoológico o simplemente relajarte en el
+                        césped mientras observas a los neoyorquinos pasar. Para
+                        obtener vistas panorámicas de la ciudad, sube al Empire
+                        State Building o al observatorio Top of the Rock en el
+                        Rockefeller Center. Sumérgete en la historia en la Isla
+                        de Ellis, donde millones de inmigrantes llegaron a
+                        Estados Unidos en busca de una vida mejor, o maravíllate
+                        con la Estatua de la Libertad, un símbolo de esperanza y
+                        libertad para millones de personas en todo el mundo. No
+                        te pierdas la emoción de Times Square, con sus luces
+                        brillantes, teatros de renombre mundial y una energía
+                        inigualable que te dejará sin aliento. Estas son solo
+                        algunas de las muchas atracciones que hacen de Nueva
+                        York una ciudad verdaderamente única y emocionante.
+                    </p>
+                </section>
+                <section class="gallery" id="gallery">
+                    <h2 class="gallery__title">
+                        <i class="fas fa-images"></i>Galería
+                    </h2>
+                    <p class="gallery__content">
+                        Inserta aquí una galería de imágenes de Nueva York.
+                    </p>
+                    <div class="gallery__carousel">
+                        <img src="image1.jpg" alt="Image 1" class="gallery__carousel-image">
+                        <img src="image2.jpg" alt="Image 2" class="gallery__carousel-image">
+                        <img src="image3.jpg" alt="Image 3" class="gallery__carousel-image">
+                        <img src="image4.jpg" alt="Image 4" class="gallery__carousel-image">
+                        <img src="image5.jpg" alt="Image 5" class="gallery__carousel-image">
+                      </div>
+                </section>
+                <section class="contact" id="contact">
+                    <h2 class="contact__title">
+                        <i class="fas fa-envelope"></i>Contacto
+                    </h2>
+                    <form class="contact__form">
+                        <label for="name" class="contact__label">Nombre:</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            class="contact__input"
+                            required
+                        />
+                        <label for="email" class="contact__label">Email:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="contact__input"
+                            required
+                        />
+                        <label for="message" class="contact__label"
+                            >Mensaje:</label
+                        >
+                        <textarea
+                            id="message"
+                            name="message"
+                            class="contact__textarea"
+                            required
+                        ></textarea>
+                        <button type="submit" class="contact__button">
+                            Enviar
+                        </button>
+                    </form>
+                </section>
+                <include src="./views/footer.html"></include>
+            </div>
         </div>
 
-        </div>
-
-        <include src="./views/footer.html"></include>
         <script type="module" src="./assets/scripts/main.js"></script>
         <!-- do not remove this line! -->
     </body>
