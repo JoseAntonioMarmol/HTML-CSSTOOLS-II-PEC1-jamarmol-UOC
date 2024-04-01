@@ -15,8 +15,9 @@ body {
   // color: $uoc-corporate;
 }
 
-.uoc-container {
-  max-width: 800px;
+.container {
+  max-width: 1200px;
+  width: 100%;
   margin: auto;
   padding: 2rem;
   border-radius: 2rem;
@@ -24,6 +25,14 @@ body {
   background-color: #fff;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.wrapper {
+  display: grid;
+  grid-gap: 1px;
+  color: #444;
+  min-height: 80vh;
+  min-width: 450px;
+  margin: 10vw;
 }
 
 .uoc-logo {
@@ -124,49 +133,49 @@ body {
 
 
 /* Bloque div */
-div {
-  padding: 20px;
+// div {
+//   padding: 20px;
 
-  &__title {
-    margin-top: 0;
-  }
+//   &__title {
+//     margin-top: 0;
+//   }
 
-  &.about {
-    background-color: $secondary-color;
-  }
+//   &.about {
+//     background-color: $secondary-color;
+//   }
 
-  &.gallery {
-    background-color: $secondary-color;
+//   &.gallery {
+//     background-color: $secondary-color;
 
-    &__images {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+//     &__images {
+//       display: flex;
+//       flex-wrap: wrap;
+//       gap: 10px;
 
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-    }
-  }
+//       img {
+//         max-width: 100%;
+//         height: auto;
+//       }
+//     }
+//   }
 
-  &.contact {
-    background-color: #f8f9fa;
+//   &.contact {
+//     background-color: #f8f9fa;
 
-    &__label {
-      display: block;
-      margin-bottom: 5px;
-    }
+//     &__label {
+//       display: block;
+//       margin-bottom: 5px;
+//     }
 
-    &__input,
-    &__textarea,
-    &__button {
-      display: block;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  }
-}
+//     &__input,
+//     &__textarea,
+//     &__button {
+//       display: block;
+//       width: 100%;
+//       margin-bottom: 10px;
+//     }
+//   }
+// }
 
 /* Bloque Footer */
 .footer {
@@ -179,11 +188,124 @@ div {
 /* Bloque Carousel */
 
 // .gallery__carousel {
-//   width: 100%;
-//   overflow: hidden;
+//   width: 100vw;
+//   height: 200px;
 // }
 
-// .gallery__carousel-image {
+// @keyframes display {
+//   0% {
+//     transform: translateX(200px);
+//     opacity: 0;
+//   }
+//   10% {
+//     transform: translateX(0);
+//     opacity: 1;
+//   }
+//   20% {
+//     transform: translateX(0);
+//     opacity: 1;
+//   }
+//   30% {
+//     transform: translateX(-200px);
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: translateX(-200px);
+//     opacity: 0;
+//   }
+// }
+
+// .gallery__carousel {
+//   display: relative;
+//   width: 100vw;
+//   height: 300px;
+//   margin-top: 15vh;
+// }
+
+// .gallery__carousel > .gallery__carousel-image {
+//   position: absolute;
+//   top : 0;
+//   left:  calc(50% - 100px);
+//   opacity: 0;
+//   transition: display 10s infinite;
+// }
+
+// .gallery__carousel-image:nth-child(2) {
+//   animation-delay: 2s;
+// }
+
+// .gallery__carousel-image:nth-child(3) {
+//   animation-delay: 4s;
+// }
+
+// .gallery__carousel-image:nth-child(4) {
+//   animation-delay: 6s;
+// }
+
+// .gallery__carousel-image:nth-child(5) {
+//   animation-delay: 8s;
+// }
+
+/* Bloque Carousel */
+
+.gallery__carousel {
+  // width: 100v
+  height:  calc(400px * 9 / 16); /* Ajusta la altura según tus necesidades */
+  margin-top: 15vh;
+  // position: relative; /* Corrección: position en lugar de display */
+}
+
+.gallery__carousel > .gallery__carousel-image {
+  // position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Centra horizontalmente */
+  opacity: 0;
+  transition: opacity 1s ease; /* Agrega transición de opacidad */
+  max-width: 400px; /* Establece el ancho máximo */
+  width: 100%; /* Ajusta el ancho al 100% para mantener el aspect ratio */
+  height: auto; /* Ajusta la altura automáticamente para mantener el aspect ratio */
+}
+
+.gallery__carousel-image:nth-child(1) {
+  animation: display 10s infinite;
+}
+
+.gallery__carousel-image:nth-child(2) {
+  animation: display 10s infinite;
+  animation-delay: 2s; /* Retrasa la animación para la segunda imagen */
+}
+
+.gallery__carousel-image:nth-child(3) {
+  animation: display 10s infinite;
+  animation-delay: 4s; /* Retrasa la animación para la tercera imagen */
+}
+
+.gallery__carousel-image:nth-child(4) {
+  animation: display 10s infinite;
+  animation-delay: 6s; /* Retrasa la animación para la cuarta imagen */
+}
+
+.gallery__carousel-image:nth-child(5) {
+  animation: display 10s infinite;
+  animation-delay: 8s; /* Retrasa la animación para la quinta imagen */
+}
+
+@keyframes display {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 //   width: 100%;
 //   float: left;
 //   opacity: 0;
@@ -226,29 +348,29 @@ div {
 //   }
 // }
 
-.gallery {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 50%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  scroll-snap-type: x mandatory;
+// .gallery {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   width: 50%;
+//   overflow-x: auto;
+//   overflow-y: hidden;
+//   white-space: nowrap;
+//   scroll-snap-type: x mandatory;
 
-  &__title {
-      margin-bottom: 10px;
-  }
+//   &__title {
+//       margin-bottom: 10px;
+//   }
 
-  &__carousel {
-      display: flex;
-      flex-direction: row;
-      scroll-snap-align: start;
+//   &__carousel {
+//       display: flex;
+//       flex-direction: row;
+//       scroll-snap-align: start;
 
-      &-image {
-          width: 100%;
-          height: auto;
-          scroll-snap-align: start;
-      }
-  }
-}
+//       &-image {
+//           width: 100%;
+//           height: auto;
+//           scroll-snap-align: start;
+//       }
+//   }
+// }
