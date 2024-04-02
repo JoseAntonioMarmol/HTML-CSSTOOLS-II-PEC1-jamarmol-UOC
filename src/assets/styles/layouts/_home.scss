@@ -22,7 +22,7 @@ body {
   padding: 2rem;
   border-radius: 2rem;
   text-align: center;
-  background-color: #fff;
+  background-color: $background-color;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
@@ -68,7 +68,7 @@ body {
 /* Bloque Header */
 .header {
   background-color: $primary-color;
-  color: white;
+  color: $light-color;
   padding: 20px;
   text-align: center;
 
@@ -249,10 +249,10 @@ body {
 /* Bloque Carousel */
 
 .gallery__carousel {
-  // width: 100v
-  height:  calc(400px * 9 / 16); /* Ajusta la altura según tus necesidades */
-  margin-top: 15vh;
-  // position: relative; /* Corrección: position en lugar de display */
+  width: 100vh;
+  // height:  calc(400px * 9 / 16); /* Ajusta la altura según tus necesidades */
+  // margin-top: 15vh;
+  position: relative; /* Corrección: position en lugar de display */
 }
 
 .gallery__carousel > .gallery__carousel-image {

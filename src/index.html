@@ -26,7 +26,7 @@
                 <include src="./views/header.html"></include>
                 <section class="about" id="about">
                     <h2 class="about__title">
-                        <i class="fas fa-home"></i>Sobre Nueva York
+                        <i class="fas fa-home"></i><span>Sobre Nueva York</span>
                     </h2>
                     <p class="about__content">
                         Nueva York, la ciudad que nunca duerme, es un crisol de
@@ -45,14 +45,15 @@
                 </section>
                 <section class="attractions" id="attractions">
                     <h2 class="attractions__title">
-                        <i class="fas fa-map-marker-alt"></i>Atracciones
+                        <i class="fas fa-map-marker-alt"></i
+                        ><span>Reclamos turisticos</span>
                     </h2>
                     <p class="attractions__content">
-                        Las atracciones de Nueva York son tan diversas como la
-                        ciudad misma. Comienza tu aventura en el emblemático
-                        Central Park, un oasis verde en medio de la jungla de
-                        concreto, donde puedes pasear en bote por el lago,
-                        visitar el zoológico o simplemente relajarte en el
+                        Los reclamos turisticos de Nueva York son tan diversos
+                        como la ciudad misma. Comienza tu aventura en el
+                        emblemático Central Park, un oasis verde en medio de la
+                        jungla de concreto, donde puedes pasear en bote por el
+                        lago, visitar el zoológico o simplemente relajarte en el
                         césped mientras observas a los neoyorquinos pasar. Para
                         obtener vistas panorámicas de la ciudad, sube al Empire
                         State Building o al observatorio Top of the Rock en el
@@ -70,20 +71,121 @@
                 </section>
                 <section class="gallery" id="gallery">
                     <h2 class="gallery__title">
-                        <i class="fas fa-images"></i>Galería
+                        <i class="fas fa-images"></i
+                        ><span>Galería de imagenes</span>
                     </h2>
                     <p class="gallery__content">
                         Inserta aquí una galería de imágenes de Nueva York.
                     </p>
                     <div class="gallery__carousel">
-                        <img src="./assets/images/brooklyn-bridge-105079.jpg" alt="Image 1" class="gallery__carousel-image">
-                        <img src="./assets/images/new-york-2253292.jpg" alt="Image 2" class="gallery__carousel-image">
-                        <img src="./assets/images/pexels-david-skyrius-2129796.jpg" alt="Image 3" class="gallery__carousel-image">
-                        <img src="./assets/images/skyscraper-4340541.jpg" alt="Image 4" class="gallery__carousel-image">
-                        <img src="./assets/images/statue-of-liberty-267948.jpg" alt="Image 5" class="gallery__carousel-image">
-                      </div>
+                        <picture>
+                            <source
+                                type="image/webp"
+                                srcset="
+                                    ./assets/images/brooklyn-bridge-105079.jpg?as=webp&width=400,
+                                    ./assets/images/brooklyn-bridge-105079.jpg?as=webp&width=800 2x
+                                "
+                            />
+                            <source
+                                type="image/jpeg"
+                                srcset="
+                                    ./assets/images/brooklyn-bridge-105079.jpg?width=400,
+                                    ./assets/images/brooklyn-bridge-105079.jpg?width=800 2x
+                                "
+                            />
+                            <img
+                                src="./assets/images/brooklyn-bridge-105079.jpg?width=400"
+                                alt="Image 1"
+                                class="gallery__carousel-image"
+                            />
+                        </picture>
+                        <picture>
+                            <source
+                                type="image/webp"
+                                srcset="
+                                    ./assets/images/new-york-2253292.jpg?as=webp&width=400,
+                                    ./assets/images/new-york-2253292.jpg?as=webp&width=800 2x
+                                "
+                            />
+                            <source
+                                type="image/jpeg"
+                                srcset="
+                                    ./assets/images/new-york-2253292.jpg?width=400,
+                                    ./assets/images/new-york-2253292.jpg?width=800 2x
+                                "
+                            />
+                            <img
+                                src="./assets/images/new-york-2253292.jpg?width=400"
+                                alt="Image 2"
+                                class="gallery__carousel-image"
+                            />
+                        </picture>
+                        <picture>
+                            <source
+                                type="image/webp"
+                                srcset="
+                                    ./assets/images/pexels-david-skyrius-2129796.jpg?as=webp&width=400,
+                                    ./assets/images/pexels-david-skyrius-2129796.jpg?as=webp&width=800 2x
+                                "
+                            />
+                            <source
+                                type="image/jpeg"
+                                srcset="
+                                    ./assets/images/pexels-david-skyrius-2129796.jpg?width=400,
+                                    ./assets/images/pexels-david-skyrius-2129796.jpg?width=800 2x
+                                "
+                            />
+                            <img
+                                src="./assets/images/pexels-david-skyrius-2129796.jpg?width=400"
+                                alt="Image 3"
+                                class="gallery__carousel-image"
+                            />
+                        </picture>
+                        <picture>
+                            <source
+                                type="image/webp"
+                                srcset="
+                                    ./assets/images/skyscraper-4340541.jpg?as=webp&width=400,
+                                    ./assets/images/skyscraper-4340541.jpg?as=webp&width=800 2x
+                                "
+                            />
+                            <source
+                                type="image/jpeg"
+                                srcset="
+                                    ./assets/images/skyscraper-4340541.jpg?width=400,
+                                    ./assets/images/skyscraper-4340541.jpg?width=800 2x
+                                "
+                            />
+                            <img
+                                src="./assets/images/skyscraper-4340541.jpg?width=400"
+                                alt="Image 4"
+                                class="gallery__carousel-image"
+                            />
+                        </picture>
+                        <picture>
+                            <source
+                                type="image/webp"
+                                srcset="
+                                    ./assets/images/statue-of-liberty-267948.jpg?as=webp&width=400,
+                                    ./assets/images/statue-of-liberty-267948.jpg?as=webp&width=800 2x
+                                "
+                            />
+                            <source
+                                type="image/jpeg"
+                                srcset="
+                                    ./assets/images/statue-of-liberty-267948.jpg?width=400,
+                                    ./assets/images/statue-of-liberty-267948.jpg?width=800 2x
+                                "
+                            />
+                            <img
+                                src="./assets/images/statue-of-liberty-267948.jpg?width=400"
+                                alt="Image 5"
+                                class="gallery__carousel-image"
+                            />
+                        </picture>
+                    </div>
                 </section>
-                <section class="contact" id="contact">
+                <!-- <section class="contact" id="contact">
                     <h2 class="contact__title">
                         <i class="fas fa-envelope"></i>Contacto
                     </h2>
@@ -117,7 +219,7 @@
                             Enviar
                         </button>
                     </form>
-                </section>
+                </section> -->
                 <include src="./views/footer.html"></include>
             </div>
         </div>
