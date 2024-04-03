@@ -4,15 +4,15 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   min-height: 100vh;
   padding: 2vh 0;
   font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+  // font-size: 16px;
+  // line-height: 24px;
   background-color: $background-color;
-  // color: $uoc-corporate;
+  color: $primary-color;
 }
 
 .container {
@@ -22,17 +22,21 @@ body {
   padding: 2rem;
   border-radius: 2rem;
   text-align: center;
-  background-color: $background-color;
+  background-color: $dark-color;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 .wrapper {
   display: grid;
   grid-gap: 1px;
-  color: #444;
-  min-height: 80vh;
-  min-width: 450px;
-  margin: 10vw;
+  color: $secondary-color;
+  background-color: $tertiary-color;
+  // min-height: 80vh;
+  // min-width: 450px;
+  // margin: 10vw;
+  overflow-x: auto;
+  max-width: calc(100% - 4rem);
+  margin:auto;
 }
 
 .uoc-logo {
@@ -248,63 +252,113 @@ body {
 
 /* Bloque Carousel */
 
-.gallery__carousel {
-  width: 100vh;
-  // height:  calc(400px * 9 / 16); /* Ajusta la altura según tus necesidades */
-  // margin-top: 15vh;
-  position: relative; /* Corrección: position en lugar de display */
-}
+.gallery {
+  text-align: center;
 
-.gallery__carousel > .gallery__carousel-image {
-  // position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%); /* Centra horizontalmente */
-  opacity: 0;
-  transition: opacity 1s ease; /* Agrega transición de opacidad */
-  max-width: 400px; /* Establece el ancho máximo */
-  width: 100%; /* Ajusta el ancho al 100% para mantener el aspect ratio */
-  height: auto; /* Ajusta la altura automáticamente para mantener el aspect ratio */
-}
-
-.gallery__carousel-image:nth-child(1) {
-  animation: display 10s infinite;
-}
-
-.gallery__carousel-image:nth-child(2) {
-  animation: display 10s infinite;
-  animation-delay: 2s; /* Retrasa la animación para la segunda imagen */
-}
-
-.gallery__carousel-image:nth-child(3) {
-  animation: display 10s infinite;
-  animation-delay: 4s; /* Retrasa la animación para la tercera imagen */
-}
-
-.gallery__carousel-image:nth-child(4) {
-  animation: display 10s infinite;
-  animation-delay: 6s; /* Retrasa la animación para la cuarta imagen */
-}
-
-.gallery__carousel-image:nth-child(5) {
-  animation: display 10s infinite;
-  animation-delay: 8s; /* Retrasa la animación para la quinta imagen */
-}
-
-@keyframes display {
-  0% {
-    opacity: 0;
+  &__title {
+      margin-bottom: 20px;
   }
-  20% {
-    opacity: 1;
+
+  &__content {
+      margin-bottom: 30px;
   }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
+
+  &__carousel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-item {
+          margin-right: 10px;
+
+          &:last-child {
+              margin-right: 0;
+          }
+
+          img {
+              max-width: 400px;
+              height: auto;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+              transition: transform 0.3s ease;
+
+              &:hover {
+                  transform: scale(1.05);
+              }
+          }
+      }
   }
 }
+@media screen and (max-width: 767px) {
+  .gallery__carousel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .gallery__carousel-item {
+      margin-bottom: 20px;
+  }
+}
+
+
+// .gallery__carousel {
+//   width: 100vh;
+//   // height:  calc(400px * 9 / 16); /* Ajusta la altura según tus necesidades */
+//   // margin-top: 15vh;
+//   position: relative; /* Corrección: position en lugar de display */
+// }
+
+// .gallery__carousel > .gallery__carousel-image {
+//   // position: absolute;
+//   top: 0;
+//   left: 50%;
+//   transform: translateX(-50%); /* Centra horizontalmente */
+//   opacity: 0;
+//   transition: opacity 1s ease; /* Agrega transición de opacidad */
+//   max-width: 400px; /* Establece el ancho máximo */
+//   width: 100%; /* Ajusta el ancho al 100% para mantener el aspect ratio */
+//   height: auto; /* Ajusta la altura automáticamente para mantener el aspect ratio */
+// }
+
+// .gallery__carousel-image:nth-child(1) {
+//   animation: display 10s infinite;
+// }
+
+// .gallery__carousel-image:nth-child(2) {
+//   animation: display 10s infinite;
+//   animation-delay: 2s; /* Retrasa la animación para la segunda imagen */
+// }
+
+// .gallery__carousel-image:nth-child(3) {
+//   animation: display 10s infinite;
+//   animation-delay: 4s; /* Retrasa la animación para la tercera imagen */
+// }
+
+// .gallery__carousel-image:nth-child(4) {
+//   animation: display 10s infinite;
+//   animation-delay: 6s; /* Retrasa la animación para la cuarta imagen */
+// }
+
+// .gallery__carousel-image:nth-child(5) {
+//   animation: display 10s infinite;
+//   animation-delay: 8s; /* Retrasa la animación para la quinta imagen */
+// }
+
+// @keyframes display {
+//   0% {
+//     opacity: 0;
+//   }
+//   20% {
+//     opacity: 1;
+//   }
+//   80% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
 
 //   width: 100%;
 //   float: left;
