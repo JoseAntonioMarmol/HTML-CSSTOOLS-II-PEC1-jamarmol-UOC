@@ -8,7 +8,7 @@ based on the [UOC Boilerplate](https://github.com/uoc-advanced-html-css/uoc-boil
 ## Technologies used
 
 - [Parcel](https://parceljs.org/) is used to bundle the project.
-- [Scss](https://sass-lang.com/) is used to write the css.
+- [Sass](https://sass-lang.com/) is used to write the css.
 - [VSCode](https://code.visualstudio.com/) is used as IDE.
 - [PostHtml](https://posthtml.org/) is used to transform the html.
 - [styleint](https://stylelint.io/) is used to lint the css.
