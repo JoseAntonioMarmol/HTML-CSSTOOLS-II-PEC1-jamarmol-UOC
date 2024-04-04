@@ -4,13 +4,9 @@
 }
 
 body {
-  // display: flex;
-  // flex-direction: column;
   min-height: 100vh;
   padding: 2vh 0;
   font-family: $font-family-sans-serif;
-  // font-size: 16px;
-  // line-height: 24px;
   background-color: $background-color;
   color: $primary-color;
 }
@@ -31,48 +27,14 @@ body {
   grid-gap: 1px;
   color: $secondary-color;
   background-color: $tertiary-color;
-  // min-height: 80vh;
-  // min-width: 450px;
-  // margin: 10vw;
   overflow-x: auto;
   max-width: calc(100% - 4rem);
   margin:auto;
 }
 
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
-
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
-  }
-}
-
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
-
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
-  }
-}
-
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
-}
-
 /* Bloque Header */
 .header {
   background-color: $primary-color;
-  color: $light-color;
   padding: 20px;
   text-align: center;
 
@@ -81,34 +43,27 @@ body {
   }
 
   &__nav {
-    // margin-top: 20px;
     padding: 10px 0;
-
     .nav__list {
       padding: 0;
       list-style-type: none;
       display: flex;
-      // justify-content: center;
-      justify-content: space-around;
+      justify-content: center;
       .nav__item {
-        // margin-right: 20px;
         cursor: pointer;
         transition: background-color 0.3s;
-
         &:last-child {
           margin-right: 0;
         }
-
         .nav__link {
-          color: $secondary-color;
+          color: $light-color;
           text-decoration: none;
           display: inline-block;
-          padding: 10px;
+          padding: $spacing;
           transition: color 0.3s;
           .link__text{
             margin-left: 5px;
           }
-
           &:hover {
             text-decoration: underline;
           }
@@ -121,9 +76,7 @@ body {
     &__nav {
       .nav__list {
         flex-direction: column;
-
         .nav__item {
-          // margin: 10px 0;
           padding: $spacing;
           text-align: center;
           .link__text {
@@ -135,122 +88,40 @@ body {
   }
 }
 
-
-/* Bloque div */
-// div {
-//   padding: 20px;
-
-//   &__title {
-//     margin-top: 0;
-//   }
-
-//   &.about {
-//     background-color: $secondary-color;
-//   }
-
-//   &.gallery {
-//     background-color: $secondary-color;
-
-//     &__images {
-//       display: flex;
-//       flex-wrap: wrap;
-//       gap: 10px;
-
-//       img {
-//         max-width: 100%;
-//         height: auto;
-//       }
-//     }
-//   }
-
-//   &.contact {
-//     background-color: #f8f9fa;
-
-//     &__label {
-//       display: block;
-//       margin-bottom: 5px;
-//     }
-
-//     &__input,
-//     &__textarea,
-//     &__button {
-//       display: block;
-//       width: 100%;
-//       margin-bottom: 10px;
-//     }
-//   }
-// }
-
 /* Bloque Footer */
 .footer {
   background-color: $primary-color;
   color:$secondary-color;
-  text-align: center;
   padding: 10px 0;
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  text-align: center;
 }
 
-/* Bloque Carousel */
+/* Bloque section */
+section{
+  border-radius: 2rem;
+  font-size:calc(10px + 0.6vw);
+  padding: 5px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  span {
+    margin-left: 5px;
+  }
+  p {
+    margin: 0 auto;
+  }
+}
+section:nth-child(even) {
+  background-color: $info-color;
+}
 
-// .gallery__carousel {
-//   width: 100vw;
-//   height: 200px;
-// }
+section:nth-child(odd) {
+  background-color: $primary-color;
+  color:$light-color;
+}
 
-// @keyframes display {
-//   0% {
-//     transform: translateX(200px);
-//     opacity: 0;
-//   }
-//   10% {
-//     transform: translateX(0);
-//     opacity: 1;
-//   }
-//   20% {
-//     transform: translateX(0);
-//     opacity: 1;
-//   }
-//   30% {
-//     transform: translateX(-200px);
-//     opacity: 0;
-//   }
-//   100% {
-//     transform: translateX(-200px);
-//     opacity: 0;
-//   }
-// }
-
-// .gallery__carousel {
-//   display: relative;
-//   width: 100vw;
-//   height: 300px;
-//   margin-top: 15vh;
-// }
-
-// .gallery__carousel > .gallery__carousel-image {
-//   position: absolute;
-//   top : 0;
-//   left:  calc(50% - 100px);
-//   opacity: 0;
-//   transition: display 10s infinite;
-// }
-
-// .gallery__carousel-image:nth-child(2) {
-//   animation-delay: 2s;
-// }
-
-// .gallery__carousel-image:nth-child(3) {
-//   animation-delay: 4s;
-// }
-
-// .gallery__carousel-image:nth-child(4) {
-//   animation-delay: 6s;
-// }
-
-// .gallery__carousel-image:nth-child(5) {
-//   animation-delay: 8s;
-// }
-
-/* Bloque Carousel */
+/* Bloque Gallery */
 
 .gallery {
   text-align: center;
@@ -284,8 +155,10 @@ body {
 
               &:hover {
                   transform: scale(1.05);
+                  border: 2px solid #000;
               }
           }
+
       }
   }
 }
@@ -300,131 +173,3 @@ body {
       margin-bottom: 20px;
   }
 }
-
-
-// .gallery__carousel {
-//   width: 100vh;
-//   // height:  calc(400px * 9 / 16); /* Ajusta la altura según tus necesidades */
-//   // margin-top: 15vh;
-//   position: relative; /* Corrección: position en lugar de display */
-// }
-
-// .gallery__carousel > .gallery__carousel-image {
-//   // position: absolute;
-//   top: 0;
-//   left: 50%;
-//   transform: translateX(-50%); /* Centra horizontalmente */
-//   opacity: 0;
-//   transition: opacity 1s ease; /* Agrega transición de opacidad */
-//   max-width: 400px; /* Establece el ancho máximo */
-//   width: 100%; /* Ajusta el ancho al 100% para mantener el aspect ratio */
-//   height: auto; /* Ajusta la altura automáticamente para mantener el aspect ratio */
-// }
-
-// .gallery__carousel-image:nth-child(1) {
-//   animation: display 10s infinite;
-// }
-
-// .gallery__carousel-image:nth-child(2) {
-//   animation: display 10s infinite;
-//   animation-delay: 2s; /* Retrasa la animación para la segunda imagen */
-// }
-
-// .gallery__carousel-image:nth-child(3) {
-//   animation: display 10s infinite;
-//   animation-delay: 4s; /* Retrasa la animación para la tercera imagen */
-// }
-
-// .gallery__carousel-image:nth-child(4) {
-//   animation: display 10s infinite;
-//   animation-delay: 6s; /* Retrasa la animación para la cuarta imagen */
-// }
-
-// .gallery__carousel-image:nth-child(5) {
-//   animation: display 10s infinite;
-//   animation-delay: 8s; /* Retrasa la animación para la quinta imagen */
-// }
-
-// @keyframes display {
-//   0% {
-//     opacity: 0;
-//   }
-//   20% {
-//     opacity: 1;
-//   }
-//   80% {
-//     opacity: 1;
-//   }
-//   100% {
-//     opacity: 0;
-//   }
-// }
-
-//   width: 100%;
-//   float: left;
-//   opacity: 0;
-//   transition: opacity 0.5s ease;
-// }
-
-// .gallery__carousel-image:nth-child(1) {
-//   opacity: 1;
-//   z-index: 2;
-// }
-
-// .gallery__carousel-image:nth-child(2) {
-//   z-index: 1;
-// }
-
-// .gallery__carousel-image:nth-child(3) {
-//   z-index: 1;
-//   animation: carousel 12s infinite;
-// }
-
-// .gallery__carousel-image:nth-child(4) {
-//   z-index: 1;
-//   animation: carousel 12s infinite;
-//   animation-delay: 4s;
-// }
-
-// .gallery__carousel-image:nth-child(5) {
-//   z-index: 1;
-//   animation: carousel 12s infinite;
-//   animation-delay: 8s;
-// }
-
-// @keyframes carousel {
-//   0% {
-//     transform: translateX(0);
-//   }
-
-//   100% {
-//     transform: translateX(-100%);
-//   }
-// }
-
-// .gallery {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: flex-start;
-//   width: 50%;
-//   overflow-x: auto;
-//   overflow-y: hidden;
-//   white-space: nowrap;
-//   scroll-snap-type: x mandatory;
-
-//   &__title {
-//       margin-bottom: 10px;
-//   }
-
-//   &__carousel {
-//       display: flex;
-//       flex-direction: row;
-//       scroll-snap-align: start;
-
-//       &-image {
-//           width: 100%;
-//           height: auto;
-//           scroll-snap-align: start;
-//       }
-//   }
-// }
