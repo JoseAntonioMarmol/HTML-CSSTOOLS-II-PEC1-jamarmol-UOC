@@ -20,6 +20,6 @@ The project is hosted on [GitHub](https://github.com/JoseAntonioMarmol/HTML-CSST
 
 ## Netlify
 
-The project is hosted on [Netlify](https://jujutsukaisenfan.netlify.app/).
+The project is hosted on [Netlify](https://htmlcssii-pec1-jamarmol.netlify.app).
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/08efde5f-02e1-462e-b809-533af2b9fb6f/deploy-status)](https://app.netlify.com/sites/htmlcssii-pec1-jamarmol/deploys)
